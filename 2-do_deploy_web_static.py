@@ -13,7 +13,13 @@ env.hosts = ['34.75.183.8', '34.139.231.119']
 
 
 def do_deploy(archive_path):
-    ''' distributes archive to web servers '''
+    '''
+    distributes archive to web servers
+    Args:
+        archive_path(str): Path of archive to be distributed
+    Returns:
+        True if it succeeds, False if it fails at any point
+    '''
     file = archive_path.split('/')[-1]
     name = archive_path.split('.')[0]
     if path.isfile(archive_path):
