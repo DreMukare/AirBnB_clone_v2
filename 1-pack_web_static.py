@@ -11,7 +11,7 @@ from os import path
 def do_pack():
     ''' creates a .tgz archive '''
     current_date = datetime.utcnow()
-    file = 'versions/web_static_{}{}{}{}{}{}'.format(
+    file = 'versions/web_static_{}{}{}{}{}{}.tgz'.format(
         current_date.year,
         current_date.month,
         current_date.day,
