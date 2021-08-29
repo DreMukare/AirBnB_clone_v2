@@ -5,7 +5,6 @@ the contents of web_static
 distributes archive to web servers
 '''
 from fabric.api import env, put, run
-from datetime import datetime
 from os import path
 
 
