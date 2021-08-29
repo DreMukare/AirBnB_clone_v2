@@ -3,11 +3,10 @@
 # Creates the folders where the static resources will be held
 # creates placeholder files and symbolic links
 
-mkdir -p /data/web_static/releases/test/
-mkdir -p /data/web_static/shared/
+mkdir -p /data/web_static/releases/test
+mkdir -p /data/web_static/shared
 touch /data/web_static/releases/test/index.html
-printf %s "
-<html>
+printf %s "<html>
   <head>
   </head>
   <body>
@@ -15,7 +14,7 @@ printf %s "
   </body>
 </html>
 " > /data/web_static/releases/test/index.html
-ln -sf /data/web_static/releases/test/ /data/web_static/current
+ln -sf /data/web_static/releases/test /data/web_static/current
 chown -hR ubuntu:ubuntu /data/
 printf %s "
 server {
