@@ -6,7 +6,15 @@
 mkdir -p /data/web_static/releases/test/
 mkdir -p /data/web_static/shared/
 touch /data/web_static/releases/test/index.html
-echo "Welcome to my airbnb" > /data/web_static/releases/test/index.html
+printf %s "
+<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>
+" > /data/web_static/releases/test/index.html
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 chown -hR ubuntu:ubuntu /data/
 printf %s "
