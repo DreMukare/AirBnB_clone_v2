@@ -21,6 +21,7 @@ def cisfun(text):
     """ displays C followed by value of text passed """
     return 'C {}'.format(text.replace('_', ' '))
 
+
 @app.route('/python/<text>', strict_slashes=False)
 def python_route(text='is cool'):
     """ displays Python followed by value of text """
