@@ -40,7 +40,8 @@ def number_template(n):
     ''' displays HTML page only if n is an integer '''
     return render_template('5-number.html', n=n)
 
-@app.route('/number_odd_or_even/<int:n>',  strict_slashes=False)
+
+@app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def even_or_odd(n):
     ''' displays HTML page only if n is an integer '''
     if n % 2 == 0:
@@ -48,6 +49,7 @@ def even_or_odd(n):
     else:
         evenness = 'odd'
     return render_template('6-number_odd_or_even.html', n=n, evenness=evenness)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
