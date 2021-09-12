@@ -6,10 +6,13 @@ distributes archive to web servers
 '''
 from fabric.api import env, put, run
 from os import path
+import logging
 
 
+logging.basicConfig()
+paramiko_logger = logging.getLogger("paramiko.transport")
+paramiko_logger.disabled = True
 env.hosts = ['34.75.183.8', '34.139.231.119']
-
 
 def do_deploy(archive_path):
     '''
