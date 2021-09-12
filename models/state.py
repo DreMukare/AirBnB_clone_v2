@@ -23,7 +23,7 @@ class State(BaseModel, Base):
         super().__init__(*args, **kwargs)
 
     if os.getenv('HBNB_TYPE_STORAGE') != 'db':
-        
+
         @property
         def cities(self):
             ''' gets city instances related to current state '''
