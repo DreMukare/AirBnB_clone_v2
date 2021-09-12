@@ -28,7 +28,7 @@ class State(BaseModel, Base):
         def cities(self):
             ''' gets city instances related to current state '''
             city_list = []
-            all_cities = models.storage.all(City)
+            all_cities = models.storage.all('City')
             for city in all_cities.values():
                 if city.state_id == self.id:
                     city_list.append(city)
