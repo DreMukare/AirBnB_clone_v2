@@ -9,11 +9,12 @@ from models import storage
 app = Flask(__name__)
 
 
-@app.route('/cities_by_states', strict_slashes=False)
-def cities_by_states():
+@app.route('/hbnb_filters', strict_slashes=False)
+def hbnb_filters():
     ''' displays HTML page of state objects sorted by name '''
     states = storage.all('State')
-    return render_template('8-cities_by_states.html', states=states)
+    amenities = storage.all('Amenity')
+    return render_template('9-states.html', states=states, amenities=amenities)
 
 
 @app.teardown_appcontext
@@ -23,4 +24,4 @@ def close_connection():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000')
+    app.run(host='0.0.0.0')
