@@ -9,6 +9,8 @@ from models.engine.db_storage import DBStorage
 
 storage_t = getenv("HBNB_TYPE_STORAGE")
 
+storage = FileStorage()
+
 if storage_t == "db":
     from models.engine.db_storage import DBStorage
     storage = DBStorage()
