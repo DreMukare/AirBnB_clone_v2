@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-"""This module instantiates storage engines"""
-import os
+"""
+initialize the models package
+"""
 
-if os.getenv('HBNB_TYPE_STORAGE') == "db":
+from os import getenv
+from models.engine.file_storage import FileStorage
+from models.engine.db_storage import DBStorage
+
+storage_t = getenv("HBNB_TYPE_STORAGE")
+
+if storage_t == "db":
     from models.engine.db_storage import DBStorage
     storage = DBStorage()
 else:
